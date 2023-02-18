@@ -21,11 +21,11 @@ public class BaseClass {
 	protected WebDriverUtility web;
 	protected WebDriver driver;
 	protected Homepage home;
-	protected demoappskillrary skillrarydemo;
-	protected seleniumtrainingpage selenium;
+	protected demoappskillrary skillraryDemo;
+	protected seleniumtrainingpage seleniumTraining;
 	protected testingpage testing;
-	protected corejavaforselenium corejava;
-	protected videopage javavideo;
+	protected corejavaforselenium coreJava;
+	protected videopage javaVideo;
 	protected contactuspage contact;
 	protected long time;
 	
@@ -37,7 +37,7 @@ public class BaseClass {
 		excel = new Excelutility();
 		web = new WebDriverUtility();
 		
-		property.propertyfileintialization(Iconstantpath.PROPERTIES_FILE_PATH);
+		property.propertyFileIntialization(Iconstantpath.PROPERTIES_FILE_PATH);
 		excel.excelInitialization(Iconstantpath.EXCEL_FILE_PATH);
 	}
 	
@@ -45,16 +45,16 @@ public class BaseClass {
 	public void methodConfiguration() {
 	    time = Long.parseLong(property.fetchProperty("timeouts"));
 		driver = web.openApplication(property.fetchProperty("browser"),
-				property.fetchProperty("url"),time);
+				property.fetchProperty("Url"),time);
 				
 				home = new Homepage(driver);
 				
 				Assert.assertTrue(home.getLogo().isDisplayed());
 				
-				skillrarydemo = new demoappskillrary(driver);
-				selenium = new seleniumtrainingpage(driver);
-				corejava = new corejavaforselenium(driver);
-				javavideo = new videopage(driver);
+				skillraryDemo = new demoappskillrary(driver);
+				seleniumTraining = new seleniumtrainingpage(driver);
+				coreJava = new corejavaforselenium(driver);
+				javaVideo = new videopage(driver);
 				testing = new testingpage(driver);
 				contact = new contactuspage(driver);
 	}

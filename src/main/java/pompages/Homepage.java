@@ -12,28 +12,30 @@ public class Homepage {
 	private WebElement logo;
 	@FindBy (name = "q")
 	private WebElement search_TF;
-	@FindBy (xpath = "//input[@type='submit']")
-	private WebElement Search_button;
-	@FindBy (linkText = " GEARS ")
-	private WebElement Gears_TAB;
-	@FindBy (xpath = "(//a[text()=' SkillRary Demo APP'])[2]")
+	@FindBy (xpath = "//input[@value='go']")
+	private WebElement Search_Button;
+	@FindBy (xpath = "//a[text()=' GEARS '] ")
+	private WebElement gearsTab;
+	@FindBy (xpath = "//u1[@class='drop-menu gear_menu']/descendant::a[text()=' SkillRary Demo APP']")
 	private WebElement demoAppLink;
 	
+	
+	//Initialization
 	public Homepage(WebDriver driver) {
 		PageFactory.initElements(driver,this );
 	}
-	//intialization
+	//utilization
 	public WebElement getLogo() {
 		return logo;
 	}
 	public void searchFor(String data) {
 		search_TF.sendKeys(data);
-		Search_button.click();
+		Search_Button.click();
 	}
 	public void clickGears() {
-		Gears_TAB.click();
+		gearsTab.click();
 	}
-	public void ClickskillrarydemoApp() {
+	public void clickSkillraryDemoApp() {
 		demoAppLink.click();
 		
 	}

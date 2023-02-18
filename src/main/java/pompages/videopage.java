@@ -10,15 +10,15 @@ public class videopage {
 	//Declaration
 	
 	@FindBy(xpath="//h1[text()='Core Java For Selenium Training']")
-	private WebElement pageheader;
+	private WebElement pageHeader;
 	@FindBy(xpath="//button[@aria-label='Play']")
-	private WebElement playbutton;
+	private WebElement playButton;
 	@FindBy(xpath="//button[@aria-label='Pause']")
-	private WebElement pausebutton;
+	private WebElement pauseButton;
 	@FindBy(xpath="//span[text()='Add To Wishlist']")
-	private WebElement addtowishlist;
+	private WebElement addToWishlistTab;
 	@FindBy(xpath="//a[@class='close_cookies']")
-	private WebElement closecookiesicon;
+	private WebElement closeCookiesIcon;
 	
 	//initialization
 	
@@ -29,39 +29,35 @@ public class videopage {
 	//utilization
 	
 	public String getpageheader() {
-		return pageheader.getText();
+		return pageHeader.getText();
 			
 	}
-	public void playbutton() {
-		playbutton.click();
+	public void clickplaybutton() {
+		playButton.click();
 		
 		
 	}
 	public void clickpausebutton() {
-		pausebutton.click();
-	}
-	public void clickclosecookies() {
-		closecookiesicon.click();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void clickaddtowishlist() {
-		addtowishlist.click();
+		pauseButton.click();
 	}
 
-	public void clickplaybutton() {
-		// TODO Auto-generated method stub
-		
+	public void clickAddToWishlist() {
+		addToWishlistTab.click();
 	}
+	public void clickCloseCookies() {
+		closeCookiesIcon.click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 }

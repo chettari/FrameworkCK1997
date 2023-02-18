@@ -15,15 +15,15 @@ public class FourthTest extends BaseClass {
 		
 		
 		home.clickGears();
-		home.ClickskillrarydemoApp();
+		home.clickSkillraryDemoApp();
 		web.handleChildBrowser();
 		
-		soft.assertTrue(skillrarydemo.getPageHeader().isDisplayed());
+		soft.assertTrue(skillraryDemo.getPageHeader().isDisplayed());
 		
-		web.scrolltoElement(skillrarydemo.getcontactus());
-		skillrarydemo.clickcontactus();
+		web.scrollToElement(skillraryDemo.getContactUs());
+		skillraryDemo.clickContactus();
 		
-		soft.assertTrue(contact.getpageheader().isDisplayed());
+		soft.assertTrue(contact.getPageHeader().isDisplayed());
 		
 		List<String> data = excel.fetchDataFromExcel("sheet1");
 		contact.submitDetails(data.get(0), data.get(1), data.get(2), data.get(3));

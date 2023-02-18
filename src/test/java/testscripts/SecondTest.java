@@ -12,18 +12,18 @@ public class SecondTest extends BaseClass {
 		SoftAssert soft = new SoftAssert();
 		
 		home.clickGears();
-		home.ClickskillrarydemoApp();
+		home.clickSkillraryDemoApp();
 		web.handleChildBrowser();
 		
-		soft.assertTrue(skillrarydemo.getPageHeader().isDisplayed());
+		soft.assertTrue(skillraryDemo.getPageHeader().isDisplayed());
 		
 		
-		skillrarydemo.selectcategory(web,  1);
-		soft.assertEquals(testing.getpageheader(),"Testing");
+		skillraryDemo.selectCategory(web,  1);
+		soft.assertEquals(testing.getPageHeader(),"Testing");
 		
-		web.dragAndDropElement(testing.getSeleniumimage(),testing.getcarrtarea());
-		web.scrolltoElement(testing.clickfacebookicon());
-		testing.clickfacebookicon();
+		web.dragAndDropElement(testing.getSeleniumImage(),testing.getCarrtArea());
+		web.scrollToElement(testing.getFacebookIcon());
+		testing.clickFacebookIcon();
 		
 		soft.assertAll();
 		

@@ -9,35 +9,35 @@ public class testingpage {
 	
 	//Declaration
 	@FindBy(xpath="//h1[@class='page-header']")
-	private WebElement pageheader;
+	private WebElement pageHeader;
 	@FindBy(id="Selenium Training")
-	private WebElement seleniumimage;
+	private WebElement seleniumImage;
 	@FindBy(id="cartArea")
-	private WebElement cartarea;
+	private WebElement cartArea;
 	@FindBy(xpath="//footer[@class='main-footer']/descendant::i[@class='fa fa-facebook']")
-	private WebElement facebookicon;
+	private WebElement facebookIcon;
 	
 	//initialization
 	public testingpage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
 	//utilization
-	public String  getpageheader() {
-		return pageheader.getText();
+	public String  getPageHeader() {
+		return pageHeader.getText();
 	}
-	public WebElement getSeleniumimage() {
-		return seleniumimage;
+	public WebElement getSeleniumImage() {
+		return seleniumImage;
 	}
-	public WebElement getcarrtarea() {
-		return cartarea;
+	public WebElement getCarrtArea() {
+		return cartArea;
 	}
-	public WebElement getfacebookicon() {
-		return facebookicon;
+	public WebElement getFacebookIcon() {
+		return facebookIcon;
 	}
-	public WebElement clickfacebookicon() {
-		facebookicon.click();
-		return cartarea;
-		
+	public void clickFacebookIcon() {
+		facebookIcon.click();
+
+
 	}
 	
 	

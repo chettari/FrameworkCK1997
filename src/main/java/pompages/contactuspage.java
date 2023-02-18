@@ -10,17 +10,17 @@ public class contactuspage {
 	//Declaration
 	
 	@FindBy(xpath="//img[contains(@src,'contactus')]")
-	private WebElement pageheader;
+	private WebElement PageHeader;
 	@FindBy(name="name")
-	private WebElement fullnameTF;
+	private WebElement fullNameTF;
 	@FindBy(name="sender")
 	private WebElement emailTF;
 	@FindBy(name="subject")
 	private WebElement subjectTF;
 	@FindBy(name="message")
-	private WebElement messageTF;
+	private WebElement messageTextArea;
 	@FindBy(xpath="//button[text()='Send us mail']")
-	private WebElement sendusEmailButton;
+	private WebElement sendUsEmailButton;
 	
 	//initialization
 	
@@ -30,15 +30,15 @@ public class contactuspage {
 	
 	//utilization
 	
-	public WebElement getpageheader() {
-		return pageheader;
+	public WebElement getPageHeader() {
+		return PageHeader;
 	}
 	public void submitDetails(String name, String email, String subject, String message) {
-		fullnameTF.sendKeys(name);
+		fullNameTF.sendKeys(name);
 		emailTF.sendKeys(email);
 		subjectTF.sendKeys(subject);
-		messageTF.sendKeys(message);
-		sendusEmailButton.click();
+		messageTextArea.sendKeys(message);
+		sendUsEmailButton.click();
 
 		}
 

@@ -53,7 +53,7 @@ public class Excelutility {
 	public List<String> fetchDataFromExcel(String SheetName){
 		List<String> datalist = new ArrayList<>();
 		org.apache.poi.ss.usermodel.Sheet Sheet = wb.getSheet(SheetName);
-		for(int i=0;i<getLastRowNum();i++) {
+		for(int i=0;i<4;i++) {
 			String data = Sheet.getRow(i).getCell(1).getStringCellValue();
 			datalist.add(data);
 		}
@@ -63,10 +63,6 @@ public class Excelutility {
 		return datalist;
 		}
 	
-	private int getLastRowNum() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 	/**
 	 * This method is used close excel workbook

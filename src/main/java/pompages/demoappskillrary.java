@@ -10,15 +10,15 @@ import genericlibraries.WebDriverUtility;
 public class demoappskillrary {
 	
 	@FindBy(xpath="//div[@class='navbar-header']")
-	private WebElement pageheader;
+	private WebElement pageHeader;
 	@FindBy(id="course")
-	private WebElement courseTAB;
-	@FindBy(xpath="(//a[text()='Selenium Training'])[1]")
-	private WebElement seleniumtraininglink;
+	private WebElement courseTab;
+	@FindBy(xpath="(//span[@class='Wrappers']/a[text()='Selenium Training']")
+	private WebElement seleniumTrainingLink;
 	@FindBy(name="addresstype")
-	private WebElement categoryDropDown;
+	private WebElement categoryDropdown;
 	@FindBy(xpath="//a[text()='Contact Us']")
-	private WebElement contactuslink;
+	private WebElement contactUs;
 	
 	//initialization
 	public demoappskillrary(WebDriver driver) {
@@ -27,24 +27,23 @@ public class demoappskillrary {
 	//utilization
 	
 	public WebElement getPageHeader() {
-		return pageheader;
+		return pageHeader;
 	}
 	public void mouseHoverToCourse(WebDriverUtility web) {
-		web.mousehover(courseTAB);
+		web.mouseHover(courseTab);
 	}
-	public void clickseleniumtraining() {
-		seleniumtraininglink.click();
+	public void clickSeleniumTraining() {
+		seleniumTrainingLink.click();
 	}
-	public void selectcategory(WebDriverUtility web, int index) {
-		web.dropdown(categoryDropDown, index );
+	public void selectCategory(WebDriverUtility web, int index) {
+		web.dropdown(categoryDropdown, index );
 	}
-	public void clickcontactus(){
-		contactuslink.click();
+	public WebElement getContactUs(){
+		return contactUs;
 	}
 
-	public WebElement getcontactus() {
-		// TODO Auto-generated method stub
-		return null;
+	public void clickContactus() {
+		contactUs.click();
 	}
 
 	

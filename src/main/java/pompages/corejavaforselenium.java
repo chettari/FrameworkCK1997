@@ -10,9 +10,9 @@ public class corejavaforselenium {
 	//Declaration
 	
 	@FindBy(xpath="//h2[@class='list_title']")
-	private WebElement pageheader;
+	private WebElement pageHeader;
 	@FindBy(xpath="/a[text()=' Core Java For Selenium Trainin']")
-	private WebElement corejavaforselenium;
+	private WebElement coreJavaForSeleniumLink;
 	
 	//Initialaization
 	public corejavaforselenium(WebDriver driver) {
@@ -21,20 +21,13 @@ public class corejavaforselenium {
 	
 	//utilization
 	public String getpageheader() {
-		return pageheader.getText();
+		return pageHeader.getText();
 		
 	}
-	public void corejavaforseleniumlink() {
-		getCorejavaforselenium().click();
+	public void clickcoreJavaForSeleniumLink() {
+		coreJavaForSeleniumLink.click();
 	}
 
-	public WebElement getCorejavaforselenium() {
-		return corejavaforselenium;
-	}
-
-	public void setCorejavaforselenium(WebElement corejavaforselenium) {
-		this.corejavaforselenium = corejavaforselenium;
-	}
 	
 
 }

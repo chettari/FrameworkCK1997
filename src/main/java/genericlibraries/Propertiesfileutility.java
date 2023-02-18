@@ -11,13 +11,13 @@ import java.util.Properties;
  */
 
 public class Propertiesfileutility {
-	Properties property;
+	private Properties property;
 
 	/**
 	 * This method is used to initialize properties file
 	 * @param filepath
 	 */
-	public void propertyfileintialization(String filepath) {
+	public void propertyFileIntialization(String filepath) {
 		FileInputStream fis = null;
 		try {
 		    fis = new FileInputStream(filepath);
@@ -33,16 +33,17 @@ public class Propertiesfileutility {
 		e.printStackTrace();
 	}
 	}
+	/**
+	 * This method returns data from properties file based
+	 * @param string
+	 * @return
+	 */
 
-	public String fetchProperty1(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public String fetchProperty(String key) {
+		return property.getProperty(key);
 	}
 
-	public String fetchProperty(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
 	
 	/**

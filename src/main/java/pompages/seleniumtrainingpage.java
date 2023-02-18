@@ -11,30 +11,30 @@ public class seleniumtrainingpage {
 	
 	//Declaration
 	@FindBy(xpath="//h1[@class='page-header']")
-	private WebElement seleniumtraining;
+	private WebElement pageHeader;
 	@FindBy(id="add")
-	private WebElement addbutton;
+	private WebElement plusButton;
 	@FindBy(xpath="//button[text()=' Add to Cart']")
-	private WebElement addtocartbutton;
+	private WebElement addToCartButton;
 	@FindBy(xpath="//div[@id='callout']/span")
-	private WebElement itemaddedtocart;
+	private WebElement itemAddedMessage;
 	
 	//initialization
 	public seleniumtrainingpage(WebDriver driver) {
 		PageFactory.initElements(driver,this );
 	}
 	//utilization
-	public WebElement getPageHeader() {
-		return seleniumtraining;
+	public String getPageHeader() {
+		return pageHeader.getText();
 	}
-	public void doubleClickplusButton(WebDriverUtility web) {
-	web.doubleclickonelement(addbutton);
+	public void doubleClickPlusButton(WebDriverUtility web) {
+	web.doubleClickonElement(plusButton);
 }
-	public void clickadtocart() {
-		addtocartbutton.click();
+	public void clickAddToCart() {
+		addToCartButton.click();
 	}
-	public WebElement getitemaddedmessage() {
-		return itemaddedtocart;
+	public WebElement getItemAddedMessage() {
+		return itemAddedMessage;
 
 	}
 	
